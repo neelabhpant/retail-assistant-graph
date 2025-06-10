@@ -1,0 +1,8 @@
+Question: What is your return policy?
+Answer: Our return policy allows you to return items within 30 days of purchase for a full refund. Items must be in their original packaging and condition. Some exclusions apply.
+---
+Question: How can I track my order?
+Answer: You can track your order by logging into your account and visiting the 'Order History' page. A tracking number will be provided once your order has shipped.
+---
+Question: Do you ship internationally?
+Answer: Yes, we ship to most countries. International shipping rates and times vary depending on the destination. Please proceed to checkout to see the options available for your location.

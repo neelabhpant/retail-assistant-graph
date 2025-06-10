@@ -1,0 +1,39 @@
+[
+    {
+      "customer_id": "C001",
+      "name": "Neelabh Pant",
+      "orders": [
+        {
+          "order_id": "12345",
+          "date": "2024-05-01",
+          "items": [
+            {"name": "Laptop Pro", "price": 1299.99, "sku": "LP123"},
+            {"name": "Wireless Mouse", "price": 25.50, "sku": "WM456"}
+          ],
+          "status": "Delivered"
+        },
+        {
+          "order_id": "12346",
+          "date": "2024-05-15",
+          "items": [
+            {"name": "Noise-Cancelling Headphones", "price": 199.99, "sku": "NCH789"}
+          ],
+          "status": "Shipped"
+        }
+      ]
+    },
+    {
+      "customer_id": "C002",
+      "name": "Jane Doe",
+      "orders": [
+        {
+          "order_id": "12347",
+          "date": "2024-05-20",
+          "items": [
+            {"name": "Smart Coffee Mug", "price": 49.99, "sku": "SCM001"}
+          ],
+          "status": "Processing"
+        }
+      ]
+    }
+  ]

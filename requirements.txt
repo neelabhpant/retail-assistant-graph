@@ -1,0 +1,15 @@
+# Core
+python-dotenv
+pydantic-settings
+
+# CrewAI
+crewai==0.114.0
+langchain-openai
+
+# Neo4j & RAG
+neo4j
+sentence-transformers
+pandas # For reading the CSV data
+
+# UI
+streamlit
