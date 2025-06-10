@@ -1,39 +1,318 @@
 [
-    {
-      "customer_id": "C001",
-      "name": "Neelabh Pant",
-      "orders": [
-        {
-          "order_id": "12345",
-          "date": "2024-05-01",
-          "items": [
-            {"name": "Laptop Pro", "price": 1299.99, "sku": "LP123"},
-            {"name": "Wireless Mouse", "price": 25.50, "sku": "WM456"}
-          ],
-          "status": "Delivered"
-        },
-        {
-          "order_id": "12346",
-          "date": "2024-05-15",
-          "items": [
-            {"name": "Noise-Cancelling Headphones", "price": 199.99, "sku": "NCH789"}
-          ],
-          "status": "Shipped"
-        }
-      ]
-    },
-    {
-      "customer_id": "C002",
-      "name": "Jane Doe",
-      "orders": [
-        {
-          "order_id": "12347",
-          "date": "2024-05-20",
-          "items": [
-            {"name": "Smart Coffee Mug", "price": 49.99, "sku": "SCM001"}
-          ],
-          "status": "Processing"
-        }
-      ]
-    }
-  ]
+  {
+    "customer_id": "C001",
+    "name": "Neelabh Pant",
+    "orders": [
+      {
+        "order_id": "ORD001",
+        "date": "2024-05-01",
+        "items": [
+          {"name": "Laptop Pro", "sku": "LP123", "price": 1299.99},
+          {"name": "Wireless Mouse", "sku": "WM456", "price": 25.50}
+        ],
+        "status": "Delivered"
+      },
+      {
+        "order_id": "ORD002",
+        "date": "2024-05-15",
+        "items": [
+          {"name": "Noise-Cancelling Headphones", "sku": "NCH789", "price": 199.99}
+        ],
+        "status": "Shipped"
+      }
+    ]
+  },
+  {
+    "customer_id": "C002",
+    "name": "Jane Doe",
+    "orders": [
+      {
+        "order_id": "ORD003",
+        "date": "2024-05-20",
+        "items": [
+          {"name": "Smart Coffee Mug", "sku": "SCM001", "price": 49.99}
+        ],
+        "status": "Processing"
+      },
+      {
+        "order_id": "ORD004",
+        "date": "2024-05-22",
+        "items": [
+          {"name": "Cookbook 'Global Kitchen'", "sku": "CKB005", "price": 29.99}
+        ],
+        "status": "Delivered"
+      }
+    ]
+  },
+  {
+    "customer_id": "C003",
+    "name": "Alex Ray",
+    "orders": [
+      {
+        "order_id": "ORD005",
+        "date": "2024-05-25",
+        "items": [
+          {"name": "Wireless Mouse", "sku": "WM456", "price": 25.50},
+          {"name": "Thriller Novel 'The Final Hour'", "sku": "THB004", "price": 14.50}
+        ],
+        "status": "Delivered"
+      }
+    ]
+  },
+  {
+    "customer_id": "C004",
+    "name": "Sam Wilson",
+    "orders": [
+      {
+        "order_id": "ORD006",
+        "date": "2024-06-01",
+        "items": [
+          {"name": "Yoga Mat", "sku": "YBC001", "price": 35.00},
+          {"name": "Classic Blue T-Shirt", "sku": "TSB001", "price": 19.99}
+        ],
+        "status": "Delivered"
+      }
+    ]
+  },
+  {
+    "customer_id": "C005",
+    "name": "Emily Carter",
+    "orders": [
+      {
+        "order_id": "ORD007",
+        "date": "2024-06-02",
+        "items": [
+          {"name": "Laptop Pro", "sku": "LP123", "price": 1299.99},
+          {"name": "Ergonomic Keyboard", "sku": "EKB006", "price": 79.99}
+        ],
+        "status": "Delivered"
+      }
+    ]
+  },
+  {
+    "customer_id": "C006",
+    "name": "Bennet Hayes",
+    "orders": [
+      {
+        "order_id": "ORD008",
+        "date": "2024-06-03",
+        "items": [
+          {"name": "Resistance Band Set", "sku": "RES020", "price": 15.99},
+          {"name": "Fitness Tracker", "sku": "FTR023", "price": 99.00}
+        ],
+        "status": "Delivered"
+      }
+    ]
+  },
+  {
+    "customer_id": "C007",
+    "name": "Chloe Davis",
+    "orders": [
+      {
+        "order_id": "ORD009",
+        "date": "2024-06-04",
+        "items": [
+          {"name": "Sci-Fi Novel 'Galaxy's Edge'", "sku": "SFN003", "price": 15.99},
+          {"name": "Mystery Novel 'The Silent Witness'", "sku": "MYS029", "price": 16.50}
+        ],
+        "status": "Delivered"
+      }
+    ]
+  },
+  {
+    "customer_id": "C008",
+    "name": "David Miller",
+    "orders": [
+      {
+        "order_id": "ORD010",
+        "date": "2024-06-05",
+        "items": [
+          {"name": "Denim Jacket", "sku": "HDJ002", "price": 89.99},
+          {"name": "Running Sneakers", "sku": "SNE026", "price": 119.99}
+        ],
+        "status": "Delivered"
+      }
+    ]
+  },
+  {
+    "customer_id": "C009",
+    "name": "Fiona Green",
+    "orders": [
+      {
+        "order_id": "ORD011",
+        "date": "2024-06-06",
+        "items": [
+          {"name": "Essential Oil Diffuser", "sku": "DIFF014", "price": 35.99},
+          {"name": "Indoor Plant Pot Set", "sku": "PLNT015", "price": 29.99}
+        ],
+        "status": "Delivered"
+      }
+    ]
+  },
+  {
+    "customer_id": "C010",
+    "name": "George King",
+    "orders": [
+      {
+        "order_id": "ORD012",
+        "date": "2024-06-07",
+        "items": [
+          {"name": "4K Ultra HD Monitor", "sku": "MON007", "price": 349.99},
+          {"name": "1080p Webcam", "sku": "WEB008", "price": 59.99}
+        ],
+        "status": "Delivered"
+      }
+    ]
+  },
+  {
+    "customer_id": "C011",
+    "name": "Hannah Wright",
+    "orders": [
+      {
+        "order_id": "ORD013",
+        "date": "2024-06-08",
+        "items": [
+          {"name": "Yoga Mat", "sku": "YBC001", "price": 35.00},
+          {"name": "Fitness Water Bottle", "sku": "FWB019", "price": 18.50}
+        ],
+        "status": "Delivered"
+      }
+    ]
+  },
+  {
+    "customer_id": "C012",
+    "name": "Ian Clark",
+    "orders": [
+      {
+        "order_id": "ORD014",
+        "date": "2024-06-09",
+        "items": [
+          {"name": "Thriller Novel 'The Final Hour'", "sku": "THB004", "price": 14.50},
+          {"name": "Biography of an Innovator", "sku": "BIO030", "price": 21.00}
+        ],
+        "status": "Delivered"
+      }
+    ]
+  },
+  {
+    "customer_id": "C013",
+    "name": "Julia Adams",
+    "orders": [
+      {
+        "order_id": "ORD015",
+        "date": "2024-06-10",
+        "items": [
+          {"name": "Graphic Hoodie", "sku": "HDS024", "price": 45.00},
+          {"name": "Baseball Cap", "sku": "HAT027", "price": 24.00}
+        ],
+        "status": "Delivered"
+      }
+    ]
+  },
+  {
+    "customer_id": "C014",
+    "name": "Kevin Baker",
+    "orders": [
+      {
+        "order_id": "ORD016",
+        "date": "2024-06-11",
+        "items": [
+          {"name": "Chef's Knife", "sku": "CUT017", "price": 65.00},
+          {"name": "Bamboo Cutting Board", "sku": "BAM018", "price": 22.00},
+          {"name": "Cookbook 'Global Kitchen'", "sku": "CKB005", "price": 29.99}
+        ],
+        "status": "Delivered"
+      }
+    ]
+  },
+  {
+    "customer_id": "C015",
+    "name": "Laura Scott",
+    "orders": [
+      {
+        "order_id": "ORD017",
+        "date": "2024-06-12",
+        "items": [
+          {"name": "Noise-Cancelling Headphones", "sku": "NCH789", "price": 199.99},
+          {"name": "Portable Power Bank", "sku": "PBNK011", "price": 39.99}
+        ],
+        "status": "Delivered"
+      }
+    ]
+  },
+  {
+    "customer_id": "C016",
+    "name": "Michael Turner",
+    "orders": [
+      {
+        "order_id": "ORD018",
+        "date": "2024-06-13",
+        "items": [
+          {"name": "Ergonomic Keyboard", "sku": "EKB006", "price": 79.99},
+          {"name": "Wireless Mouse", "sku": "WM456", "price": 25.50}
+        ],
+        "status": "Delivered"
+      }
+    ]
+  },
+  {
+    "customer_id": "C017",
+    "name": "Nora Hill",
+    "orders": [
+      {
+        "order_id": "ORD019",
+        "date": "2024-06-14",
+        "items": [
+          {"name": "15lb Kettlebell", "sku": "KTL022", "price": 29.99},
+          {"name": "Resistance Band Set", "sku": "RES020", "price": 15.99}
+        ],
+        "status": "Delivered"
+      }
+    ]
+  },
+  {
+    "customer_id": "C018",
+    "name": "Oscar Green",
+    "orders": [
+      {
+        "order_id": "ORD020",
+        "date": "2024-06-15",
+        "items": [
+          {"name": "Classic Blue T-Shirt", "sku": "TSB001", "price": 19.99},
+          {"name": "Polarized Sunglasses", "sku": "SUN028", "price": 75.00}
+        ],
+        "status": "Delivered"
+      }
+    ]
+  },
+  {
+    "customer_id": "C019",
+    "name": "Penny Allen",
+    "orders": [
+      {
+        "order_id": "ORD021",
+        "date": "2024-06-16",
+        "items": [
+          {"name": "History of Ancient Civilizations", "sku": "HIS031", "price": 24.95},
+          {"name": "Sci-Fi Novel 'Galaxy's Edge'", "sku": "SFN003", "price": 15.99}
+        ],
+        "status": "Delivered"
+      }
+    ]
+  },
+  {
+    "customer_id": "C020",
+    "name": "Quinn Evans",
+    "orders": [
+      {
+        "order_id": "ORD022",
+        "date": "2024-06-17",
+        "items": [
+          {"name": "Luxury Bath Towel Set", "sku": "BTH016", "price": 55.00},
+          {"name": "Essential Oil Diffuser", "sku": "DIFF014", "price": 35.99}
+        ],
+        "status": "Delivered"
+      }
+    ]
+  }
+]

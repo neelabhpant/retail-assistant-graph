@@ -12,8 +12,12 @@ class FAQInput(BaseModel):
 
 class FAQTool(BaseTool):
     name: str = "FAQ Search Tool"
-    description: str = "Searches the FAQ knowledge base in the graph database to find answers to user questions."
+    description: str = (
+        "Use this tool to answer general questions about company policies like returns, shipping, payments, and warranties. "
+        "It is the best tool for 'what is' or 'how do I' questions, even if the question mentions a product category like 'electronics'."
+    )
     args_schema: Type[BaseModel] = FAQInput
+    
     _embedding_model: SentenceTransformer
 
     def __init__(self):
@@ -25,7 +29,6 @@ class FAQTool(BaseTool):
         query_embedding = self._embedding_model.encode(query).tolist()
 
         with neo4j_driver.session() as session:
-            # This Cypher query calls the vector index to find the most similar FAQ
             result = session.run(
                 """
                 CALL db.index.vector.queryNodes('faq_index', 1, $query_embedding)
@@ -35,7 +38,7 @@ class FAQTool(BaseTool):
                 query_embedding=query_embedding
             ).single()
 
-            if result and result["score"] > 0.7: # Confidence threshold
-                return f"Relevant FAQ found (Similarity Score: {result['score']:.2f}):\n{result['text']}"
+            if result and result["score"] > 0.65:
+                return f"Relevant FAQ found:\n{result['text']}"
             else:
                 return "No relevant information found in the FAQ database for that question."

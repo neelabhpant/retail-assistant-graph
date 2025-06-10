@@ -21,12 +21,12 @@ class RetailAgents:
     def retail_assistant_agent(self) -> Agent:
         return Agent(
             role="Retail Assistant Agent",
-            goal="You MUST use the tools provided to answer customer inquiries. "
-                 "For each specific task, find the most appropriate tool and use it. "
-                 "Your final answer for this task must be only the direct, raw output from the tool.",
+            goal="Your primary goal is to use the provided tools to find factual answers to user inquiries. "
+                 "Analyze the user's request and select the single best tool to answer it. "
+                 "You must provide only the direct, raw output from the tool.",
             backstory="You are a diligent and fact-based customer service representative. "
                       "You do not provide information from your own knowledge. "
-                      "You strictly follow a process: 1. Identify the right tool. 2. Use the tool. 3. Return only the tool's direct output.",   
+                      "You follow a strict process: analyze the query, select the most direct tool, use it, and return the output.",
             llm=llm,
             verbose=True,
             tools=[

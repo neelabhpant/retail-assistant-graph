@@ -20,13 +20,13 @@ class RetailTasks:
         )
 
     def summarize_response_task(self, agent) -> Task:
-            return Task(
-                # This is the original description
-                description="Review the user's query and the factual results from the Retail Assistant Agent. "
-                            "Synthesize this information into a single, cohesive, and friendly response. "
-                            "Your final answer MUST be only the customer-facing response, without any of your own internal thoughts, "
-                            "notes, or prefixes like 'Final Answer:'. Just provide the clean text ready to be shown to the customer.",
-                
-                expected_output="A final, well-formatted, and conversational response to the user that addresses all parts of their original query.",
-                agent=agent,
-            )
+        return Task(
+            description="Review the user's query and the factual results from the Retail Assistant Agent. "
+                        "Synthesize this information into a single, cohesive, and friendly response. "
+                        "IMPORTANT: If the tool output is a list, a chunk of text, or any pre-formatted content, "
+                        "you MUST include it in your response verbatim (exactly as it is), preserving all formatting like newlines, bullet points, and spacing. "
+                        "You should add your conversational text before or after the formatted content, but do not alter the content itself.",
+            expected_output="A final, well-formatted, and conversational response to the user that addresses all parts of their original query, "
+                            "preserving any lists or structured text from the tool outputs.",
+            agent=agent,
+        )
