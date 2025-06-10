@@ -7,36 +7,39 @@ sys.path.append(os.getcwd())
 from tools.order_history_tool import OrderHistoryTool
 from tools.return_item_tool import ReturnItemTool
 from tools.faq_tool import FAQTool
+from tools.product_search_tool import ProductSearchTool
 from graph_db.driver import Neo4jDriver
 
 def run_tests():
-    print("--- Testing Neo4j-Powered Tools ---")
+    print("--- Testing All Neo4j-Powered Tools ---")
     
     # === Test OrderHistoryTool ===
     print("\n--- Testing OrderHistoryTool ---")
-    # ... (code for this test is unchanged) ...
     order_history_tool = OrderHistoryTool()
-    print("\n[Test Case 1.1: Valid Customer 'C001']")
-    result = order_history_tool.run(customer_id='C001')
+    print("[Test Case 1.1] Valid Customer 'C001'")
     print("Result:")
-    print(result)
-
+    print(order_history_tool.run(customer_id='C001'))
+    
     # === Test ReturnItemTool ===
     print("\n--- Testing ReturnItemTool ---")
-    # ... (code for this test is unchanged) ...
     return_item_tool = ReturnItemTool()
-    print("\n[Test Case 2.1: Eligible Return (Delivered Order)]")
-    result = return_item_tool.run(customer_id='C001', order_id='12345', product_sku='LP123')
+    print("\n[Test Case 2.1] Eligible Return")
     print("Result:")
-    print(result)
-
+    print(return_item_tool.run(customer_id='C001', order_id='12345', product_sku='LP123'))
+    
     # === Test FAQTool ===
     print("\n--- Testing FAQTool ---")
     faq_tool = FAQTool()
-    print("\n[Test Case 3.1: Query about returns]")
-    result = faq_tool.run(query="how do I send things back?")
+    print("\n[Test Case 3.1] Query about returns")
     print("Result:")
-    print(result)
+    print(faq_tool.run(query="how do I send things back?"))
+
+    # === Test ProductSearchTool ===
+    print("\n--- Testing ProductSearchTool ---")
+    product_search_tool = ProductSearchTool()
+    print("\n[Test Case 4.1] Query for a computer")
+    print("Result:")
+    print(product_search_tool.run(query="a computer for my office"))
     
     print("\n--- All Tests Complete ---")
 
