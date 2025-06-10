@@ -15,26 +15,26 @@ def ingest_data():
     embedding_model = SentenceTransformer(settings.embedding_model_name)
 
     with neo4j_driver.session() as session:
-        # Step 1: Create constraints for unique nodes
+        # Create constraints for unique nodes
         print("Creating uniqueness constraints...")
         session.run("CREATE CONSTRAINT IF NOT EXISTS FOR (c:Customer) REQUIRE c.id IS UNIQUE")
         session.run("CREATE CONSTRAINT IF NOT EXISTS FOR (p:Product) REQUIRE p.id IS UNIQUE")
         session.run("CREATE CONSTRAINT IF NOT EXISTS FOR (o:Order) REQUIRE o.id IS UNIQUE")
         session.run("CREATE CONSTRAINT IF NOT EXISTS FOR (f:FAQ) REQUIRE f.id IS UNIQUE")
 
-        # Step 2: Ingest structured data (Customers, Products, Orders)
+        # Ingest structured data (Customers, Products, Orders)
         print("Ingesting structured data (Customers, Products, Orders)...")
         ingest_customer_order_data(session)
 
-        # Step 3: Ingest unstructured data (FAQs) and create embeddings
+        # Ingest unstructured data (FAQs) and create embeddings
         print("Ingesting unstructured data (FAQs)...")
         faqs = ingest_faq_data(session, embedding_model)
 
-        # Step 4: Create product embeddings from the ingested products
+        # Create product embeddings from the ingested products
         print("Creating and storing product embeddings...")
         create_product_embeddings(session, embedding_model)
 
-        # Step 5: Create vector indexes
+        # Create vector indexes
         print("Creating vector indexes for FAQs and Products...")
         create_vector_indexes(session)
 
@@ -159,7 +159,6 @@ def create_vector_indexes(session):
         }}
         """
     )
-    # Wait for indexes to come online
     print("Waiting for indexes to populate...")
     session.run("CALL db.awaitIndexes(300)")
 

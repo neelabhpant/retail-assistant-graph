@@ -5,6 +5,7 @@ from tools.order_history_tool import OrderHistoryTool
 from tools.return_item_tool import ReturnItemTool
 from tools.faq_tool import FAQTool
 from tools.product_search_tool import ProductSearchTool
+from tools.recommendation_tool import RecommendationTool
 
 class RetailAgents:
     def query_router_agent(self) -> Agent:
@@ -20,14 +21,12 @@ class RetailAgents:
     def retail_assistant_agent(self) -> Agent:
         return Agent(
             role="Retail Assistant Agent",
-            
             goal="You MUST use the tools provided to answer customer inquiries. "
                  "For each specific task, find the most appropriate tool and use it. "
                  "Your final answer for this task must be only the direct, raw output from the tool.",
             backstory="You are a diligent and fact-based customer service representative. "
                       "You do not provide information from your own knowledge. "
-                      "You strictly follow a process: 1. Identify the right tool. 2. Use the tool. 3. Return only the tool's direct output.",
-            
+                      "You strictly follow a process: 1. Identify the right tool. 2. Use the tool. 3. Return only the tool's direct output.",   
             llm=llm,
             verbose=True,
             tools=[
@@ -35,6 +34,7 @@ class RetailAgents:
                 ReturnItemTool(),
                 FAQTool(),
                 ProductSearchTool(),
+                RecommendationTool(),
             ],
         )
 

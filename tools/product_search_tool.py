@@ -25,7 +25,6 @@ class ProductSearchTool(BaseTool):
         query_embedding = self._embedding_model.encode(query).tolist()
 
         with neo4j_driver.session() as session:
-            # This Cypher query calls the vector index to find the most similar products
             result = session.run(
                 """
                 CALL db.index.vector.queryNodes('product_index', 3, $query_embedding)
@@ -40,7 +39,6 @@ class ProductSearchTool(BaseTool):
             if not products:
                 return "No relevant products found in the catalog for that query."
 
-            # Format the output into a readable string
             response_str = "Found relevant products:\n"
             for product in products:
                 if product['score'] > 0.6: # Confidence threshold

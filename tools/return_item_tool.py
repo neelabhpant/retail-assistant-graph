@@ -28,7 +28,7 @@ class ReturnItemTool(BaseTool):
                 customer_id=customer_id,
                 order_id=order_id,
                 product_sku=product_sku
-            ).single() # We expect only one result or none
+            ).single()
 
             if not result:
                 return f"Error: Could not validate the request. Please ensure customer ID '{customer_id}', order ID '{order_id}', and product SKU '{product_sku}' are all correct."

@@ -33,5 +33,4 @@ class Neo4jDriver:
             cls._driver = None
             print("Neo4j connection closed.")
 
-# You can get an instance of the driver to be used across the application
 neo4j_driver = Neo4jDriver.get_driver()

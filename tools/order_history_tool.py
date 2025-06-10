@@ -16,8 +16,7 @@ class OrderHistoryTool(BaseTool):
     def _run(self, customer_id: str) -> str:
         """Executes a Cypher query to retrieve order history from Neo4j."""
         with neo4j_driver.session() as session:
-            # This Cypher query finds the customer, then traverses the graph
-            # to find all orders they placed and the products contained in each order.
+
             result = session.run(
                 """
                 MATCH (c:Customer {id: $customer_id})-[:PLACED]->(o:Order)
@@ -28,7 +27,6 @@ class OrderHistoryTool(BaseTool):
                 customer_id=customer_id
             )
 
-            # Process the query results
             orders = {}
             customer_name = ""
             for record in result:
@@ -48,7 +46,6 @@ class OrderHistoryTool(BaseTool):
             if not orders:
                 return f"No order history found for customer with ID '{customer_id}'."
 
-            # Format the output into a readable string
             history_str = f"Order history for {customer_name} (ID: {customer_id}):\n"
             for order_id, order_details in orders.items():
                 history_str += f"- Order ID: {order_id}, Date: {order_details['date']}, Status: {order_details['status']}\n"
