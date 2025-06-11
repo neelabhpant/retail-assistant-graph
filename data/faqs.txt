@@ -6,3 +6,12 @@ Answer: You can track your order by logging into your account and visiting the '
 ---
 Question: Do you ship internationally?
 Answer: Yes, we ship to most countries. International shipping rates and times vary depending on the destination. Please proceed to checkout to see the options available for your location.
+---
+Question: What payment methods do you accept?
+Answer: We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and Apple Pay.
+---
+Question: How do I change the password for my account?
+Answer: To change your password, please log in to your account, navigate to the 'Account Settings' page, and select the 'Change Password' option.
+---
+Question. What is the warranty on electronics?
+Answer: All of our electronic products come with a one-year manufacturer's warranty that covers defects in materials and workmanship. This does not cover accidental damage.

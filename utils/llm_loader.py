@@ -7,7 +7,7 @@ def load_llm():
     return ChatOpenAI(
         api_key=settings.openai_api_key,
         model=settings.openai_model_name,
-        temperature=0
+        temperature=0.2
     )
 
 llm = load_llm()
