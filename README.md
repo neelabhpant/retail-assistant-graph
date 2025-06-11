@@ -8,12 +8,15 @@ The core of this system is its ability to perform sophisticated tasks like perso
 
 ### Interactive User Interface (Streamlit)
 The application provides a clean, conversational UI for users to interact with the AI assistant.
+![Screenshot 2025-06-11 at 10 32 08 AM](https://github.com/user-attachments/assets/a8dd9d23-688f-4c12-93c2-0b2324ffe596)
 
 
 
 ### The Knowledge Graph (Neo4j)
 All data, including customers, products, and orders, is stored as an interconnected graph, allowing the system to understand complex relationships.
+![Screenshot 2025-06-10 at 9 12 50 PM](https://github.com/user-attachments/assets/1bf021bc-52db-42db-9315-a0dd38fcc5eb)
 
+![Screenshot 2025-06-10 at 9 13 25 PM](https://github.com/user-attachments/assets/28f0a2b4-d74f-41d6-8d51-bfe700257485)
 
 
 ## ✨ Core Features
